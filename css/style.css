@@ -1,82 +1,104 @@
 * {
-  margin: 0;
+  border: 0;
   padding: 0;
   box-sizing: border-box;
   font-family:'Poppins', sans-serif;
 }
 
 header {
-  text-align: center;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-header h1 {
-  font-weight: 100;
-}
-
-#explain {
-  font-weight: 100;
+  white-space: nowrap;
 }
 
 body{
-  background: hsl(240, 2%, 90%);
-  min-width: 375px;
-  max-width: 1440px;
-
+  width: 80%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  margin: auto;
+  font-size: 15px;
+  background: hsl(240, 2%, 90%);
 }
 
-main section.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: hsl(0, 0%, 98%);
-  padding: 1rem 1.5rem;
-  border-radius: 10px;
-  max-height: 468px;
-  margin-left: 32px;
-  margin-bottom: 24px;
+p {
+  color: hsl(229, 6%, 66%);
+}
+
+.top-container {
   text-align: center;
 }
 
-main section.card:first-child {
-  margin-left: 0;
-}
-
-section.card .icon{
-  height: 45px;
-  width: 45px;
-}
-
-section.card img{
-  width: 100%;
-}
-
-main section.card h3 {
-  margin: 16px 0;
-  font-size: 100%;
-}
-
-main section.card span {
-  max-width: 240px;
+.top-container h1 {
+  font-size: 2rem;
   font-weight: 200;
+  color: hsl(229, 6%, 66%);
 }
 
-main section.card.supervisor {
-  box-shadow: 0px 20px 50px -30px hsl(180, 62%, 55%);
+.top-container h2 {
+  margin-top: -20px;
+  font-size: 2rem;
+  color: hsl(234, 12%, 34%);
 }
 
-main section.card.builder {
-  box-shadow: 0px 20px 50px -30px hsl(0, 78%, 62%);
+.top-container p {
+  font-size: 1.2rem;
+  white-space: pre-wrap;
+  text-align: center;
 }
 
-main section.card.karma {
-  box-shadow: 0px 20px 50px -30px hsl(34, 97%, 64%);
+.col {
+  position: relative;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 18px auto;
+  height: 200px;
+  padding: 20px;
+  width: 350px;
 }
 
-main section.card.calculator {
-  box-shadow: 0px 20px 50px -30px hsl(212, 86%, 64%);
+.col img {
+  position: absolute;
+  padding: 15px;
+  right: 0;
+  bottom: 0;
+}
+
+.col h3 {
+  font-size: 1.3rem;
+  color:hsl(234, 12%, 34%);
+}
+
+.col::after{
+  content: '';
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.col-red::after {
+  background: hsl(0, 78%, 62%);
+}
+
+.col-cyan::after {
+  background: hsl(180, 62%, 55%) ;
+}
+
+.col-orange::after {
+  background: hsl(34, 97%, 64%);
+}
+
+.col-blue::after {
+  background: hsl(212, 86%, 64%);
+}
+
+@media (min-width: 1150px){
+  .box-section{
+    display: flex;
+    align-items: center;
+  }
+  .col {
+    margin: 18px;
+  }
 }
